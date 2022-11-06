@@ -1718,14 +1718,17 @@ Details Page Style
 }
 
 .item-details-page:after {
-  background-image: url(/assets/images/category-collection-dec.png);
-  width: 300px;
-  height: 282px;
+  background-image: url(../images/goldenbar.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px !important;
+  height: 282px !important;
+  opacity: 0.3;
   position: absolute;
   bottom: 0;
   right: 30px;
   content: "";
-  z-index: 1;
 }
 
 .item-details-page .left-image {
@@ -2085,7 +2088,8 @@ Create Page Style
   margin-bottom: 120px;
 }
 
-#contact input {
+#contact input,
+#contact textarea {
   width: 100%;
   height: 46px;
   text-align: left;
@@ -2097,7 +2101,8 @@ Create Page Style
   color: #afafaf;
 }
 
-#contact input::placeholder {
+#contact input::placeholder,
+#contact textarea::placeholder {
   color: #afafaf;
 }
 
