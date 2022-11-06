@@ -5,6 +5,7 @@ TemplateMo 577 Liberty Market
 https://templatemo.com/tm-577-liberty-market
 
 */
+
 /* ---------------------------------------------
 Table of contents
 ------------------------------------------------
@@ -27,6 +28,8 @@ font & reset css
 reset
 --------------------------------------------- 
 */
+
+$primary: #ae6f0e;
 html,
 body,
 div,
@@ -185,32 +188,27 @@ body {
   background: #fff;
   font-family: "Lato", sans-serif;
 }
-
 .glowOnHover {
   transition: all 0.5s;
-}
-.glowOnHover:hover {
-  transform: translateY(-10px);
-  transition: all 0.5s;
-  box-shadow: 0px 14px 20px -4px rgba(240, 185, 104, 0.18);
-}
 
-.cardsItem img {
-  height: 35vh;
+  &:hover {
+    transform: translateY(-10px);
+    transition: all 0.5s;
+    box-shadow: 0px 14px 20px -4px rgb(240 185 104 / 18%);
+  }
 }
-
-::-moz-selection {
-  background: #ae6f0e;
-  color: #fff;
+.cardsItem {
+  img {
+    height: 35vh;
+  }
 }
-
 ::selection {
-  background: #ae6f0e;
+  background: $primary;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #ae6f0e;
+  background: $primary;
   color: #fff;
 }
 
@@ -218,7 +216,7 @@ body {
   font-size: 14px;
   color: #fff;
   background-color: transparent;
-  border: 1px solid #ae6f0e;
+  border: 1px solid $primary;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -242,15 +240,15 @@ body {
 }
 
 .border-button a:hover {
-  background-color: #ae6f0e;
+  background-color: $primary;
   color: #fff;
 }
 
 .main-button a {
   font-size: 14px;
   color: #fff;
-  background-color: #ae6f0e;
-  border: 1px solid #ae6f0e;
+  background-color: $primary;
+  border: 1px solid $primary;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -275,7 +273,7 @@ body {
 
 .main-button a:hover {
   background-color: #fff;
-  color: #ae6f0e;
+  color: $primary;
   border: 1px solid #fff;
 }
 
@@ -294,7 +292,7 @@ section {
 .section-heading .line-dec {
   width: 100px;
   height: 2px;
-  background-color: #ae6f0e;
+  background-color: $primary;
   margin: 0 auto 30px auto;
 }
 
@@ -308,7 +306,7 @@ section {
 }
 
 .section-heading h2 em {
-  color: #ae6f0e;
+  color: $primary;
   font-style: normal;
 }
 
@@ -317,6 +315,7 @@ section {
 Pre-loader Style
 --------------------------------------------- 
 */
+
 .js-preloader {
   position: fixed;
   top: 0;
@@ -324,12 +323,16 @@ Pre-loader Style
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.98);
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
   opacity: 1;
   visibility: visible;
   z-index: 9999;
+  -webkit-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
 }
 
@@ -341,24 +344,32 @@ Pre-loader Style
 
 @-webkit-keyframes dot {
   50% {
+    -webkit-transform: translateX(96px);
     transform: translateX(96px);
   }
 }
+
 @keyframes dot {
   50% {
+    -webkit-transform: translateX(96px);
     transform: translateX(96px);
   }
 }
+
 @-webkit-keyframes dots {
   50% {
+    -webkit-transform: translateX(-31px);
     transform: translateX(-31px);
   }
 }
+
 @keyframes dots {
   50% {
+    -webkit-transform: translateX(-31px);
     transform: translateX(-31px);
   }
 }
+
 .preloader-inner {
   position: relative;
   width: 142px;
@@ -372,14 +383,16 @@ Pre-loader Style
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #ae6f0e;
+  background: $primary;
   border-radius: 50%;
+  -webkit-transform: translateX(0);
   transform: translateX(0);
   -webkit-animation: dot 2.8s infinite;
   animation: dot 2.8s infinite;
 }
 
 .preloader-inner .dots {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
   margin-top: 12px;
   margin-left: 31px;
@@ -393,7 +406,7 @@ Pre-loader Style
   width: 16px;
   height: 16px;
   margin-left: 16px;
-  background: #ae6f0e;
+  background: $primary;
   border-radius: 50%;
 }
 
@@ -402,6 +415,7 @@ Pre-loader Style
 Header Style
 --------------------------------------------- 
 */
+
 .background-header {
   background-color: #fff !important;
   height: 70px !important;
@@ -410,6 +424,9 @@ Header Style
   left: 0;
   right: 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) !important;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
 
@@ -421,6 +438,9 @@ Header Style
   left: 0;
   right: 0;
   z-index: 100;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
 
@@ -440,6 +460,9 @@ Header Style
 
 .header-area .main-nav .logo {
   flex-basis: 30%;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -463,6 +486,9 @@ Header Style
   text-align: right;
   margin-top: 15px;
   margin-right: 0px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: relative;
   z-index: 999;
@@ -480,6 +506,9 @@ Header Style
   font-size: 14px;
   text-transform: capitalize;
   color: #2a2a2a;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   border: transparent;
   padding: 8px 15px;
@@ -495,7 +524,7 @@ Header Style
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
   color: #fff;
-  background-color: #ae6f0e;
+  background-color: $primary;
 }
 
 .background-header .main-nav .nav li:hover a,
@@ -529,8 +558,11 @@ Header Style
 .header-area .main-nav .menu-trigger span,
 .header-area .main-nav .menu-trigger span:before,
 .header-area .main-nav .menu-trigger span:after {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #ae6f0e;
+  background-color: $primary;
   display: block;
   position: absolute;
   width: 30px;
@@ -541,13 +573,16 @@ Header Style
 .background-header .main-nav .menu-trigger span,
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #ae6f0e;
+  background-color: $primary;
 }
 
 .header-area .main-nav .menu-trigger span:before,
 .header-area .main-nav .menu-trigger span:after {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #ae6f0e;
+  background-color: $primary;
   display: block;
   position: absolute;
   width: 30px;
@@ -558,7 +593,7 @@ Header Style
 
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #ae6f0e;
+  background-color: $primary;
 }
 
 .header-area .main-nav .menu-trigger span:before,
@@ -571,12 +606,18 @@ Header Style
 }
 
 .header-area .main-nav .menu-trigger span:before {
+  -moz-transform-origin: 33% 100%;
+  -ms-transform-origin: 33% 100%;
+  -webkit-transform-origin: 33% 100%;
   transform-origin: 33% 100%;
   top: -10px;
   z-index: 10;
 }
 
 .header-area .main-nav .menu-trigger span:after {
+  -moz-transform-origin: 33% 0;
+  -ms-transform-origin: 33% 0;
+  -webkit-transform-origin: 33% 0;
   transform-origin: 33% 0;
   top: 10px;
 }
@@ -589,21 +630,27 @@ Header Style
 }
 
 .header-area .main-nav .menu-trigger.active span:before {
+  -moz-transform: translateY(6px) translateX(1px) rotate(45deg);
+  -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
+  -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
   transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #ae6f0e;
+  background-color: $primary;
 }
 
 .background-header .main-nav .menu-trigger.active span:before {
-  background-color: #ae6f0e;
+  background-color: $primary;
 }
 
 .header-area .main-nav .menu-trigger.active span:after {
+  -moz-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  background-color: #ae6f0e;
+  background-color: $primary;
 }
 
 .background-header .main-nav .menu-trigger.active span:after {
-  background-color: #ae6f0e;
+  background-color: $primary;
 }
 
 .header-area.header-sticky {
@@ -623,6 +670,7 @@ Header Style
     display: none;
   }
 }
+
 @media (max-width: 992px) {
   .header-area {
     top: 0;
@@ -652,8 +700,8 @@ Header Style
     right: 70px;
   }
   .header-area.header-sticky .nav li a:hover,
-.header-area.header-sticky .nav li a.active {
-    color: #ae6f0e !important;
+  .header-area.header-sticky .nav li a.active {
+    color: $primary !important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -682,6 +730,9 @@ Header Style
     float: none;
     width: 100%;
     display: none;
+    -webkit-transition: all 0s ease 0s;
+    -moz-transition: all 0s ease 0s;
+    -o-transition: all 0s ease 0s;
     transition: all 0s ease 0s;
     margin-left: 0px;
   }
@@ -712,7 +763,7 @@ Header Style
   }
   .header-area .main-nav .nav li a:hover {
     background: #fff !important;
-    color: #ae6f0e !important;
+    color: $primary !important;
   }
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
@@ -743,15 +794,17 @@ Header Style
     top: 15px;
   }
   .header-area .main-nav .nav li.submenu:hover ul,
-.header-area .main-nav .nav li.submenu:focus ul {
+  .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
   }
 }
+
 /* 
 ---------------------------------------------
 Banner Style
 --------------------------------------------- 
 */
+
 .main-banner {
   /* background-image: url(../images/banner-bg.jpg); */
   /* background-repeat: no-repeat; */
@@ -762,23 +815,19 @@ Banner Style
   background-color: rgba(75, 75, 75, 0.479);
   position: relative;
 }
-
 .main-banner .container {
   background: transparent;
   position: relative;
   z-index: 1;
 }
-
 .video {
   position: absolute;
   z-index: 0;
   top: 0px;
   left: 0px;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
 .main-banner h6 {
   font-size: 20px;
   margin-bottom: 15px;
@@ -835,7 +884,7 @@ Banner Style
   line-height: 46px;
   font-size: 24px;
   display: inline-block;
-  color: #ae6f0e;
+  color: $primary;
   background-color: #fff;
   border-radius: 50%;
   opacity: 1;
@@ -855,6 +904,7 @@ rgba(204, 131, 20, 1)
 rgba(220, 164, 78, 1)
 --------------------------------------------- 
 */
+
 .categories-collections {
   background-image: url(../images/dark-bg.jpg);
   background-repeat: no-repeat;
@@ -913,7 +963,7 @@ rgba(220, 164, 78, 1)
   height: 46px;
   line-height: 46px;
   background-color: #fff;
-  color: #ae6f0e;
+  color: $primary;
   border-radius: 50%;
   font-size: 18px;
   position: absolute;
@@ -926,7 +976,7 @@ rgba(220, 164, 78, 1)
 }
 
 .categories .item .icon-button a:hover {
-  background-color: #ae6f0e;
+  background-color: $primary;
   color: #fff;
 }
 
@@ -991,7 +1041,7 @@ rgba(220, 164, 78, 1)
 .collections .item .main-button a:hover {
   background-color: #fff;
   border: 1px solid #fff;
-  color: #ae6f0e;
+  color: $primary;
 }
 
 .collections .owl-nav {
@@ -1020,7 +1070,7 @@ rgba(220, 164, 78, 1)
   line-height: 46px;
   font-size: 24px;
   display: inline-block;
-  color: #ae6f0e;
+  color: $primary;
   background-color: #fff;
   border-radius: 50%;
   opacity: 1;
@@ -1037,6 +1087,7 @@ rgba(220, 164, 78, 1)
 Create NFT Style
 --------------------------------------------- 
 */
+
 .create-nft {
   background-image: url(../images/main-bg.png);
   background-repeat: no-repeat;
@@ -1130,6 +1181,7 @@ Create NFT Style
 Currently Market Style
 --------------------------------------------- 
 */
+
 .currently-market {
   background-image: url(../images/dark-bg.jpg);
   background-repeat: no-repeat;
@@ -1174,7 +1226,7 @@ Currently Market Style
 
 .currently-market .filters ul li.active,
 .currently-market .filters ul li:hover {
-  background-color: #ae6f0e;
+  background-color: $primary;
 }
 
 .currently-market .item {
@@ -1212,7 +1264,7 @@ Currently Market Style
 }
 
 .currently-market .item .right-content span.author a {
-  color: #ae6f0e;
+  color: $primary;
   font-weight: 700;
   margin-top: 5px;
 }
@@ -1257,8 +1309,8 @@ Currently Market Style
 .currently-market .item .text-button a {
   font-size: 15px;
   font-weight: 700;
-  color: #ae6f0e;
-  border-bottom: 1px solid #ae6f0e;
+  color: $primary;
+  border-bottom: 1px solid $primary;
 }
 
 /* 
@@ -1266,6 +1318,7 @@ Currently Market Style
 Footer Style
 --------------------------------------------- 
 */
+
 footer {
   background: rgb(125, 90, 254);
   background: linear-gradient(132deg, #e8b444 25%, #ab6617 100%);
@@ -1293,6 +1346,7 @@ footer p a:hover {
 Page Heading Style
 --------------------------------------------- 
 */
+
 .normal-space {
   padding: 250px 0px 120px 0px !important;
 }
@@ -1350,6 +1404,7 @@ Page Heading Style
 Explore Style
 --------------------------------------------- 
 */
+
 .featured-explore {
   margin-top: 60px;
   margin-bottom: -300px;
@@ -1405,7 +1460,7 @@ Explore Style
 }
 
 .featured-explore .item .hover-effect .content span.author a {
-  color: #ae6f0e;
+  color: $primary;
   font-weight: 700;
   margin-top: 5px;
 }
@@ -1437,7 +1492,7 @@ Explore Style
   font-size: 22px;
   font-weight: 700;
   display: inline-block;
-  color: #ae6f0e;
+  color: $primary;
   background-color: #fff;
   border-radius: 50%;
   opacity: 0.5;
@@ -1491,14 +1546,6 @@ Explore Style
   background-color: #2a2a2a;
 }
 
-.discover-items #search-form input::-moz-placeholder, .discover-items #search-form select::-moz-placeholder {
-  color: #fff;
-}
-
-.discover-items #search-form input:-ms-input-placeholder, .discover-items #search-form select:-ms-input-placeholder {
-  color: #fff;
-}
-
 .discover-items #search-form input::placeholder,
 .discover-items #search-form select::placeholder {
   color: #fff;
@@ -1507,8 +1554,8 @@ Explore Style
 .discover-items #search-form button {
   font-size: 14px;
   color: #fff;
-  background-color: #ae6f0e;
-  border: 1px solid #ae6f0e;
+  background-color: $primary;
+  border: 1px solid $primary;
   height: 46px;
   line-height: 46px;
   text-align: center;
@@ -1536,13 +1583,13 @@ Explore Style
 
 .discover-items #search-form button:hover {
   background-color: #fff;
-  color: #ae6f0e;
+  color: $primary;
   border: 1px solid #fff;
 }
 
 .discover-items .item span.banner {
   font-size: 15px;
-  background-color: #ae6f0e;
+  background-color: $primary;
   color: #fff;
   font-weight: 500;
   padding: 5px 15px;
@@ -1660,6 +1707,7 @@ Explore Style
 Details Page Style
 --------------------------------------------- 
 */
+
 .item-details-page {
   background-image: url(../images/dark-bg.jpg);
   background-repeat: no-repeat;
@@ -1705,7 +1753,7 @@ Details Page Style
 }
 
 .item-details-page span.author a {
-  color: #ae6f0e;
+  color: $primary;
   font-weight: 700;
   margin-top: 5px;
 }
@@ -1722,7 +1770,7 @@ Details Page Style
 
 .item-details-page span strong {
   font-size: 20px;
-  color: #ae6f0e;
+  color: $primary;
 }
 
 .item-details-page p {
@@ -1759,21 +1807,13 @@ Details Page Style
 .item-details-page form input {
   width: 100px;
   height: 46px;
-  border: 1px solid #ae6f0e;
+  border: 1px solid $primary;
   outline: none;
   border-radius: 23px;
   background-color: transparent;
   color: #fff;
   text-align: center;
   margin-right: 15px;
-}
-
-.item-details-page form input::-moz-placeholder {
-  color: #fff;
-}
-
-.item-details-page form input:-ms-input-placeholder {
-  color: #fff;
 }
 
 .item-details-page form input::placeholder {
@@ -1783,8 +1823,8 @@ Details Page Style
 .item-details-page button {
   font-size: 14px;
   color: #fff;
-  background-color: #ae6f0e;
-  border: 1px solid #ae6f0e;
+  background-color: $primary;
+  border: 1px solid $primary;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -1809,7 +1849,7 @@ Details Page Style
 
 .item-details-page button:hover {
   background-color: #fff;
-  color: #ae6f0e;
+  color: $primary;
   border: 1px solid #fff;
 }
 
@@ -1830,7 +1870,7 @@ Details Page Style
 }
 
 .current-bid .mini-heading h4 {
-  background-color: #ae6f0e;
+  background-color: $primary;
   display: inline-block;
   font-size: 20px;
   padding: 10px 20px;
@@ -1865,7 +1905,7 @@ Details Page Style
 
 .current-bid .item .right-content a {
   font-size: 15px;
-  color: #ae6f0e;
+  color: $primary;
   font-weight: 700;
 }
 
@@ -1884,14 +1924,14 @@ Details Page Style
 
 .current-bid .item .right-content h6 em {
   font-size: 18px;
-  color: #ae6f0e;
+  color: $primary;
   font-style: normal;
   font-weight: 700;
 }
 
 .current-bid .item .right-content span.date {
   font-size: 15px;
-  color: #ae6f0e;
+  color: $primary;
 }
 
 /* 
@@ -1899,6 +1939,7 @@ Details Page Style
 Author Page Style
 --------------------------------------------- 
 */
+
 .author-page {
   background-image: url(../images/dark-bg.jpg);
   background-repeat: no-repeat;
@@ -1920,7 +1961,7 @@ Author Page Style
 
 .author-page .author h4 a {
   font-size: 15px;
-  color: #ae6f0e;
+  color: $primary;
 }
 
 .author-page .right-info {
@@ -1936,13 +1977,13 @@ Author Page Style
 }
 
 .author-page .right-info i {
-  color: #ae6f0e;
+  color: $primary;
   font-size: 22px;
 }
 
 .author-page .right-info h6 {
   font-size: 20px;
-  color: #ae6f0e;
+  color: $primary;
   margin-top: 4px;
 }
 
@@ -2036,6 +2077,7 @@ Author Page Style
 Create Page Style
 --------------------------------------------- 
 */
+
 #contact {
   background-color: #37393c;
   border-radius: 20px;
@@ -2052,14 +2094,6 @@ Create Page Style
   border: 1px solid #404245;
   margin-bottom: 30px;
   font-weight: 500;
-  color: #afafaf;
-}
-
-#contact input::-moz-placeholder {
-  color: #afafaf;
-}
-
-#contact input:-ms-input-placeholder {
   color: #afafaf;
 }
 
@@ -2091,6 +2125,7 @@ Create Page Style
 Responsive Style
 --------------------------------------------- 
 */
+
 body {
   overflow-x: hidden;
 }
@@ -2100,6 +2135,7 @@ body {
     justify-content: center;
   }
 }
+
 @media (max-width: 992px) {
   .main-banner .owl-banner {
     margin-top: 80px;
@@ -2108,18 +2144,18 @@ body {
     margin-bottom: 35px;
   }
   .create-nft .section-heading,
-.currently-market .section-heading {
+  .currently-market .section-heading {
     text-align: center;
   }
   .currently-market-item {
     width: 100%;
   }
   .create-nft .section-heading .line-dec,
-.currently-market .section-heading .line-dec {
+  .currently-market .section-heading .line-dec {
     margin: 0 auto;
   }
   .create-nft .main-button,
-.currently-market .filters {
+  .currently-market .filters {
     text-align: center;
   }
   .currently-market .filters {
@@ -2130,9 +2166,9 @@ body {
     margin-right: 0px;
   }
   .create-nft .first-item:after,
-.create-nft .second-item:after,
-.create-nft .first-item .number,
-.create-nft .second-item .number {
+  .create-nft .second-item:after,
+  .create-nft .first-item .number,
+  .create-nft .second-item .number {
     display: none;
   }
   .create-nft .item {
@@ -2163,4 +2199,7 @@ body {
     margin-left: 0px;
     margin-top: 30px;
   }
-}/*# sourceMappingURL=templatemo-liberty-market.css.map */
+}
+
+@media (max-width: 1200px) {
+}
