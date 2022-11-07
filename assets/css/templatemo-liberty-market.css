@@ -640,6 +640,9 @@ Header Style
     left: 30px;
     top: 15px;
   }
+  .header-area .main-nav .logo img {
+    width: 30vw;
+  }
   .background-header .main-nav .logo {
     top: 0px;
   }
