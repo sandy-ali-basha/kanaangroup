@@ -377,39 +377,6 @@ Pre-loader Style
   background: transparent;
 }
 
-.preloader-inner .dot {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 12px;
-  left: 15px;
-  background: $primary;
-  border-radius: 50%;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-animation: dot 2.8s infinite;
-  animation: dot 2.8s infinite;
-}
-
-.preloader-inner .dots {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  margin-top: 12px;
-  margin-left: 31px;
-  -webkit-animation: dots 2.8s infinite;
-  animation: dots 2.8s infinite;
-}
-
-.preloader-inner .dots span {
-  display: block;
-  float: left;
-  width: 16px;
-  height: 16px;
-  margin-left: 16px;
-  background: $primary;
-  border-radius: 50%;
-}
-
 /* 
 ---------------------------------------------
 Header Style
@@ -674,6 +641,9 @@ Header Style
 @media (max-width: 992px) {
   .header-area {
     top: 0;
+  }
+  .preloader-inner {
+    width: 60vw;
   }
   .header-area .main-nav {
     background-color: transparent;
