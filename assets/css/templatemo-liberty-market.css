@@ -1076,6 +1076,12 @@ Create NFT Style
   top: 5%;
 }
 
+.iconImg {
+  width: 70% !important;
+  height: 70% !important;
+  border-radius: initial !important;
+}
+
 .item .icon {
   width: 62px;
   height: 62px;
