@@ -1287,7 +1287,7 @@ Page Heading Style
 --------------------------------------------- 
 */
 .normal-space {
-  padding: 250px 0px 120px 0px !important;
+  padding: 150px 0px 90px !important;
 }
 
 .page-heading {
@@ -1653,6 +1653,10 @@ Explore Style
 Details Page Style
 --------------------------------------------- 
 */
+.iconImage {
+  width: 30px;
+}
+
 .item-details-page {
   background-image: url(../images/dark-bg.jpg);
   background-repeat: no-repeat;
@@ -2052,6 +2056,10 @@ Create Page Style
   color: #afafaf;
 }
 
+textarea {
+  border-radius: 23px;
+}
+
 #contact input::-moz-placeholder, #contact textarea::-moz-placeholder {
   color: #afafaf;
 }
@@ -2159,6 +2167,9 @@ body {
   }
   .current-bid select {
     float: none;
+  }
+  iframe {
+    border-radius: 20px;
   }
   .author-page .author {
     justify-content: center;
