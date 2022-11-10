@@ -1658,6 +1658,29 @@ Details Page Style
   content: "";
 }
 
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+.link:hover {
+  color: white;
+}
+
+.circleContact {
+  margin: 1rem auto;
+  background-color: #ae6f0e;
+  border-radius: 100%;
+  display: flex;
+  width: 62px;
+  height: 62px;
+  justify-content: center;
+  align-items: center;
+}
+.circleContact img {
+  width: 60%;
+}
+
 .item-details-page .left-image {
   margin-right: 30px;
 }

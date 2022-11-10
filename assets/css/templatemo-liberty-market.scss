@@ -1692,7 +1692,28 @@ Details Page Style
   right: 30px;
   content: "";
 }
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
 
+  &:hover {
+    color: white;
+  }
+}
+.circleContact {
+  margin: 1rem auto;
+  background-color: $primary;
+  border-radius: 100%;
+  display: flex;
+  width: 62px;
+  height: 62px;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 60%;
+  }
+}
 .item-details-page .left-image {
   margin-right: 30px;
 }
