@@ -1,34 +1,3 @@
-/*
-
-TemplateMo 577 Liberty Market
-
-https://templatemo.com/tm-577-liberty-market
-
-*/
-
-/* ---------------------------------------------
-Table of contents
-------------------------------------------------
-01. font & reset css
-02. reset
-03. global styles
-04. header
-05. banner
-06. features
-07. testimonials
-08. contact
-09. footer
-
---------------------------------------------- */
-/* 
----------------------------------------------
-font & reset css
----------------------------------------------  
----------------------------------------------
-reset
---------------------------------------------- 
-*/
-
 $primary: #ae6f0e;
 html,
 body,
@@ -1137,6 +1106,11 @@ Create NFT Style
   line-height: 62px;
   background-color: #fff;
   border-radius: 50%;
+  @media (max-width: 767px) {
+    width: 25vw;
+    margin: 0 auto;
+    height: 25vw;
+  }
 }
 
 .create-nft .item .icon img {
