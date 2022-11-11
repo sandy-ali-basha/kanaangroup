@@ -709,8 +709,39 @@ https://templatemo.com/tm-577-liberty-market
             </div>
           </div>
         </div>
-
-        <div class="col-lg-12">
+        <div
+          class="container mt-5 position-relative"
+          style="height: 100vh; z-index: 2"
+        >
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div id="tradingview_f791b"></div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/tv.js"
+            ></script>
+            <script type="text/javascript">
+              new TradingView.widget({
+                autosize: true,
+                symbol: "BINANCE:BTCBUSD",
+                interval: "D",
+                timezone: "Asia/Qatar",
+                theme: "dark",
+                style: "1",
+                width: "100%",
+                height: "100%",
+                locale: "en",
+                toolbar_bg: "#ae6f0e",
+                enable_publishing: false,
+                withdateranges: true,
+                allow_symbol_change: true,
+                container_id: "tradingview_f791b",
+              });
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+        <div class="col-lg-12 mt-5">
           <div class="section-heading">
             <div class="line-dec"></div>
             <h2>Get in <em>Touch</em> With Us</h2>
@@ -720,6 +751,7 @@ https://templatemo.com/tm-577-liberty-market
             </p>
           </div>
         </div>
+
         <div class="w-75 row mx-auto">
           <div
             class="col-lg-4 justify-content-center align-items-center d-flex flex-column"
