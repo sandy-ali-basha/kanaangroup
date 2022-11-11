@@ -71,6 +71,10 @@ figcaption {
   height: 0;
 }
 
+.fa .fa-angle-right {
+  transform: rotate(-90deg);
+}
+
 .clearfix {
   display: inline-block;
 }

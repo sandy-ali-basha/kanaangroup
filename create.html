@@ -137,7 +137,12 @@ https://templatemo.com/tm-577-liberty-market
           </div>
           <div class="col-lg-2"></div>
           <div class="col-lg-8">
-            <form data-aos="fade-up" id="contact" action="" method="post">
+            <form
+              data-aos="fade-up"
+              id="contact"
+              method="post"
+              action="mailer.php"
+            >
               <div class="row">
                 <div class="col-lg-12">
                   <h4 class="text-center">Contact Form</h4>
@@ -148,11 +153,11 @@ https://templatemo.com/tm-577-liberty-market
                 </div>
                 <div class="col-lg-6">
                   <fieldset>
-                    <label for="title"> Name</label>
+                    <label for="name"> Name</label>
                     <input
                       type="title"
-                      name="title"
-                      id="title"
+                      name="name"
+                      id="name"
                       placeholder="Ex. Lyon King"
                       autocomplete="on"
                       required
@@ -165,8 +170,8 @@ https://templatemo.com/tm-577-liberty-market
                     <label for="username">Email</label>
                     <input
                       type="mail"
-                      name="Email"
-                      id="username"
+                      name="email"
+                      id="email"
                       placeholder="mail@example.com"
                       autocomplete="on"
                       required
@@ -199,12 +204,21 @@ https://templatemo.com/tm-577-liberty-market
                     />
                   </fieldset>
                 </div> -->
+                <input
+                  class="subject"
+                  style="visibility: none"
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                />
+
                 <div class="col-lg-12">
                   <fieldset>
                     <label for="message">Your Message</label>
                     <textarea
                       name="message"
-                      id=""
+                      id="message"
                       cols="30"
                       rows="10"
                       style="height: auto"
