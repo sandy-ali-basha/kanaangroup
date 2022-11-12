@@ -1646,6 +1646,8 @@ Details Page Style
   background-size: cover;
   padding: 120px 0px 120px 0px;
   position: relative;
+  z-index: 2;
+  position: relative;
 }
 
 .item-details-page:after {
