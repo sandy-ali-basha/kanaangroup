@@ -716,6 +716,12 @@ Banner Style
   background-color: rgba(75, 75, 75, 0.479);
   position: relative;
 }
+@media (max-width: 767px) {
+  .main-banner {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+  }
+}
 
 .main-banner .container {
   background: transparent;
@@ -729,6 +735,9 @@ Banner Style
   top: 0px;
   left: 0px;
   height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -746,6 +755,12 @@ Banner Style
   font-weight: 700;
   line-height: 66px;
   text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .main-banner h2 {
+    font-size: 2rem;
+    line-height: initial;
+  }
 }
 
 .main-banner p {

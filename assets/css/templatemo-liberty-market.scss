@@ -760,6 +760,10 @@ Banner Style
   padding-bottom: 240px;
   background-color: rgba(75, 75, 75, 0.479);
   position: relative;
+  @media (max-width: 767px) {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+  }
 }
 .main-banner .container {
   background: transparent;
@@ -772,6 +776,8 @@ Banner Style
   top: 0px;
   left: 0px;
   height: 100%;
+  object-position: center;
+  width: 100vw;
   object-fit: cover;
 }
 .main-banner h6 {
@@ -787,6 +793,10 @@ Banner Style
   font-weight: 700;
   line-height: 66px;
   text-transform: uppercase;
+  @media (max-width: 767px) {
+    font-size: 2rem;
+    line-height: initial;
+  }
 }
 
 .main-banner p {
