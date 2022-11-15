@@ -1207,6 +1207,9 @@ Currently Market Style
   padding: 30px;
   display: flex;
   margin-bottom: 30px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .currently-market .item .right-content {

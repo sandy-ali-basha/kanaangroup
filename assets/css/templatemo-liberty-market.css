@@ -1175,6 +1175,11 @@ Currently Market Style
   display: flex;
   margin-bottom: 30px;
 }
+@media (max-width: 767px) {
+  .currently-market .item {
+    flex-direction: column;
+  }
+}
 
 .currently-market .item .right-content {
   margin-left: 30px;

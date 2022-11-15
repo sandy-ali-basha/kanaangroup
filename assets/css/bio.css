@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.headerBg {
+  height: 50vh;
+  width: 100%;
+  background: url("https://images.pexels.com/photos/366551/pexels-photo-366551.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center/cover no-repeat;
+  position: absolute;
+  top: 0px;
+}
+@media (max-width: 767px) {
+  .headerBg {
+    height: 40vh;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background: #274c77;
+  border-top-left-radius: 60% 20%;
+  border-top-right-radius: 60% 20%;
+  margin-top: 20vh;
+  padding-bottom: 20vh;
+  color: #e7ecef;
+}
+@media (max-width: 767px) {
+  .content {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+}
+.content * {
+  z-index: 5;
+}
+.content::before {
+  content: " ";
+  overflow: hidden;
+  position: absolute;
+  top: -2vh;
+  width: 100vw;
+  height: 20vh;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+}
+@media (max-width: 767px) {
+  .content::before {
+    background: #274c77;
+    border-top-left-radius: 40% 30%;
+    border-top-right-radius: 40% 30%;
+    top: -3vh;
+  }
+}
+.content h1 {
+  margin-bottom: 1rem;
+}
+.content .poersonImage {
+  width: 16vw;
+  height: 16vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 150px;
+  border: 5px solid white;
+  outline: #274c77 solid 15px;
+  top: -5vw;
+  position: relative;
+  background: white;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 767px) {
+  .content .poersonImage {
+    top: -18vw;
+    width: 35vw;
+    height: 35vw;
+  }
+}
+.content .socialLinks {
+  margin-bottom: 1rem;
+  display: flex;
+  list-style-type: none;
+  margin-top: 5vh;
+}
+@media (max-width: 767px) {
+  .content .socialLinks {
+    margin-top: 1rem;
+  }
+}
+.content .socialLinks li {
+  margin: 1rem;
+  width: 5vw;
+  height: 5vw;
+}
+@media (max-width: 767px) {
+  .content .socialLinks li {
+    margin: 0.5rem;
+    width: 10vw;
+    height: 10vw;
+  }
+}
+.content .socialLinks li img {
+  width: 100%;
+}
+.content .Main_link {
+  background: #e7ecef;
+  color: #274c77;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: 30vw;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+@media (max-width: 767px) {
+  .content .Main_link {
+    width: 80vw;
+  }
+}/*# sourceMappingURL=bio.css.map */
